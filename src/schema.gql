@@ -1,0 +1,102 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Book {
+  id: ID!
+  name: String!
+  userId: ID!
+  user: User!
+}
+
+type User {
+  id: ID!
+  name: String!
+  email: String!
+  password: String!
+  books: [Book!]!
+}
+
+type LoginResponse {
+  access_token: String!
+  user: User!
+}
+
+type Query {
+  users(findUserInput: FindUserInput): [User!]!
+  books(findBookInput: FindBookInput): [Book!]!
+}
+
+input FindUserInput {
+  pagination: UserPaginationInput
+  filter: UserFilterInput
+  order: UserSortInput
+}
+
+input UserPaginationInput {
+  take: Float
+  skip: Float
+}
+
+input UserFilterInput {
+  id: String
+  name: String
+}
+
+input UserSortInput {
+  id: String
+  name: String
+}
+
+input FindBookInput {
+  pagination: BookPaginationInput
+  filter: BookFilterInput
+  order: BookSortInput
+}
+
+input BookPaginationInput {
+  take: Float
+  skip: Float
+}
+
+input BookFilterInput {
+  id: String
+  name: String
+}
+
+input BookSortInput {
+  id: String
+  name: String
+}
+
+type Mutation {
+  removeUser(removeUserInput: RemoveUserInput!): User!
+  createBook(createBookInput: CreateBookInput!): Book!
+  removeBook(removeBookInput: RemoveBookInput!): Book!
+  login(loginUserInput: LoginUserInput!): LoginResponse!
+  signup(createUserInput: CreateUserInput!): User!
+}
+
+input RemoveUserInput {
+  id: ID!
+}
+
+input CreateBookInput {
+  name: String!
+  userId: ID!
+}
+
+input RemoveBookInput {
+  id: ID!
+}
+
+input LoginUserInput {
+  email: String!
+  password: String!
+}
+
+input CreateUserInput {
+  name: String!
+  email: String!
+  password: String!
+}
