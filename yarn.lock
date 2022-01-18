@@ -3335,6 +3335,11 @@ graceful-fs@^4.1.2, graceful-fs@^4.1.6, graceful-fs@^4.2.0, graceful-fs@^4.2.4:
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.2.8.tgz#e412b8d33f5e006593cbd3cee6df9f2cebbe802a"
   integrity sha512-qkIilPUYcNhJpd33n0GBXTB1MMPp14TxEsEs0pTrsSVucApsYzW5V+Q8Qxhik6KU3evy+qkAAowTByymK0avdg==
 
+graphql-fields-list@^2.2.4:
+  version "2.2.4"
+  resolved "https://registry.yarnpkg.com/graphql-fields-list/-/graphql-fields-list-2.2.4.tgz#87a0b24345476400cc027c351550e769b4bf5699"
+  integrity sha512-dhsMajI/7FMeZ8UWJDiw7iZlwacW5eBM02IVJ6IldFNgmVSDeuS+0+wF3ZOB0zcpYl3Q1spuegPLAFKcriPOCw==
+
 graphql-tag@^2.11.0, graphql-tag@^2.12.3:
   version "2.12.6"
   resolved "https://registry.yarnpkg.com/graphql-tag/-/graphql-tag-2.12.6.tgz#d441a569c1d2537ef10ca3d1633b48725329b5f1"

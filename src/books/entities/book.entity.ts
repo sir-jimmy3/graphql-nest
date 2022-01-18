@@ -26,13 +26,14 @@ export class Book {
   @Field(() => ID)
   userId: string;
 
-  @CreateDateColumn({ type: 'time with time zone' })
+  @CreateDateColumn({ type: 'timestamp with time zone' })
+  @Field(() => String)
   created_at: Date;
 
-  @UpdateDateColumn({ type: 'time with time zone' })
+  @UpdateDateColumn({ type: 'timestamp with time zone' })
   updated_at: Date;
 
-  @DeleteDateColumn({ type: 'time with time zone', default: null })
+  @DeleteDateColumn({ type: 'timestamp with time zone', default: null })
   deleted_at: Date;
 
   @ManyToOne(() => User, (user) => user.books)

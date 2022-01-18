@@ -7,4 +7,7 @@ export class LoginUserInput {
 
   @Field()
   password: string;
+
+  @Field({ nullable: true })
+  signature: string;
 }

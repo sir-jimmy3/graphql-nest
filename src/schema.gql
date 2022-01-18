@@ -6,6 +6,7 @@ type Book {
   id: ID!
   name: String!
   userId: ID!
+  created_at: String!
   user: User!
 }
 
@@ -93,6 +94,7 @@ input RemoveBookInput {
 input LoginUserInput {
   email: String!
   password: String!
+  signature: String
 }
 
 input CreateUserInput {
